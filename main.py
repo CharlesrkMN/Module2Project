@@ -27,3 +27,45 @@ if __name__ == "__main__":
     welcome_message()
     show_menu()
     print("\nReady to serve our community with the finest donuts!")
+    # Initialize our thoughtfully priced menu items
+    small_batch_price = 5.50 # Our signature donuts
+    seasonal_price = 6.50 # Using local seasonal ingredients
+    collab_price = 7.50 # Local business collaborations
+
+# Set our daily small-batch inventory
+    small_batch_inventory = 36 # Classic varieties
+    seasonal_inventory = 24 # Made with local seasonal ingredients
+    collab_inventory = 12 # Special collaboration items
+
+# Calculate our morning inventory value
+    total_value = (small_batch_price * small_batch_inventory + 
+    seasonal_price * seasonal_inventory + 
+    collab_price * collab_inventory)
+
+# Format total value to 2 decimal places using string formatting
+    print("Morning inventory value: $" + str("{:.2f}".format(total_value)))
+
+    # Customer information
+    purchase_total = 28
+    is_local_resident = True
+    bike_commuter = True
+    brought_mug = False
+
+# Initialize rewards
+    discount = 0
+
+    if is_local_resident:
+        discount += 0.10 # Supporting our neighbors with 10% off
+
+    if bike_commuter:
+        discount += 0.05 # Encouraging sustainable transport
+
+    if brought_mug:
+        discount += 0.05 # Reducing waste
+
+    if purchase_total >= 25:
+        discount += 0.05 # Bulk order appreciation
+
+# Calculate and display final discount
+    final_discount = discount * 100
+    print("Your community rewards discount: " + str(final_discount) + "%")
